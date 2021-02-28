@@ -4,6 +4,27 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get('/')
+
+@app.get("/")
 async def root():
-    return {'Principle': 'Walk on the main path.'}
+    return {"原则": ["行于大道", "熵减"]}
+
+
+@app.get("/accounts")
+async def accounts():
+    return {"Accounts": []}
+
+
+@app.post("/accounts/add")
+async def add_account():
+    return {}
+
+
+@app.get("/transactions")
+async def transactions():
+    return {}
+
+
+@app.get("/transactions/add")
+async def add_transaction():
+    return {}
